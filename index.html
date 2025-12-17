@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodak Reality App - Darkroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🕰️ Kodak Reality App</h1>
+        <p>Darkroom - Capture the Legacy</p>
+    </div>
+    
+    <div class="tabs">
+        <div class="tab active" data-tab="gallery">Gallery</div>
+        <div class="tab" data-tab="editor">Editor</div>
+        <div class="tab" data-tab="anomalies">Time Anomalies</div>
+    </div>
+    
+    <div id="gallery" class="tab-content active">
+        <div class="photo-grid" id="photoGrid"></div>
+        <div class="upload-zone" id="uploadZone">
+            📸 Upload K-Lens Photo
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        </div>
+    </div>
+    
+    <div id="editor" class="tab-content">
+        <div class="editor-container">
+            <div class="canvas-container" id="canvasContainer">
+                <canvas id="photoCanvas"></canvas>
+                <div class="split-divider" id="splitDivider"></div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Time Dial</label>
+                <input type="range" class="slider" id="timeSlider" min="0" max="100" value="50">
+            </div>
+            <div class="control-group">
+                <label>Film</label>
+                <select id="filmSelect">
+                    <option value="kodachrome">Kodachrome 64</option>
+                    <option value="ektachrome">Ektachrome 100</option>
+                    <option value="trix">Tri-X 400</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Grain</label>
+                <input type="range" class="slider" id="grainSlider" min="0" max="100" value="30">
+            </div>
+            <button class="primary" id="savePresetBtn">💾 Save Preset</button>
+            <button id="exportBtn">📤 Export</button>
+        </div>
+    </div>
+    
+    <div id="anomalies" class="tab-content">
+        <div class="time-anomalies">
+            <h3>🗺️ Nearby Time Anomalies</h3>
+            <div class="anomaly-item">
+                <span>🕌</span> India Gate 1980s - High
+            </div>
+            <div class="anomaly-item">
+                <span>🏰</span> Red Fort 1947 - Medium
+            </div>
+            <div class="anomaly-item">
+                <span>🛍️</span> Connaught Place 1920s - High
+            </div>
+        </div>
+        <div class="social-buttons">
+            <button class="social-btn instagram" id="igBtn">📸 Instagram</button>
+            <button class="social-btn tiktok" id="ttBtn">🎵 TikTok</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
