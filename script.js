@@ -73,8 +73,8 @@ function loadPhoto(event) {
 function loadPhotoForEditing(src) {
     currentImage = new Image();
     currentImage.onload = () => {
-        canvas.width = 800;
-        canvas.height = 400;
+        canvas.width = 600;
+        canvas.height = 600;
         drawSplitView();
         // switch to editor tab
         document.querySelector('.tab[data-tab="editor"]').click();
@@ -165,3 +165,4 @@ function setupControls() {
         alert('TikTok export with 1980s overlay effect! 🎬')
     );
 }
+
